@@ -86,6 +86,10 @@ public class DataFile {
 	public String getFileName() {
 		return dataFileName;
 	}
+	
+	public void setKeySeprator(char c) {
+		keySeperator = c;
+	}
 
 	private String isolateStringKey(String s) {
 		String key = "";
