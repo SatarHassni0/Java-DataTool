@@ -33,13 +33,15 @@ public class DataTool {
 	
 	public static void main(String[] args) {
 		new DataTool();
-		instance.dataFileObj = new DataFile("datafile.txt");
-		//instance.dataFileObj = new DataFile("C:\\DataTool\\datafile.txt");
+		//instance.dataFileObj = new DataFile("datafile.txt");
+		instance.dataFileObj = new DataFile("C:\\DataTool\\datafile.txt");
 		System.out.println(System.getProperty("user.dir"));
-		instance.dataFileObj.writeData("first", "mydata");
-		instance.dataFileObj.writeData("second", "myother");
-		instance.dataFileObj.writeData("hello", "world");
-		instance.dataFileObj.writeData("hello", "world.bye");
+		instance.dataFileObj.writeString("first", "mydata");
+		instance.dataFileObj.writeString("second", "myother");
+		instance.dataFileObj.writeString("hello", "world");
+		instance.dataFileObj.writeString("hello", "world.bye");
+		
+		System.out.println(instance.dataFileObj.getString("second"));
 	}
 	
 	public void init() {
